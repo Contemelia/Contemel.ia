@@ -351,7 +351,7 @@ With this, you will have successfully initiated your Vault and logged in and the
 
 <br>
 
-![HashiCorp's Vault homepage](https://imgur.com/P1qBLnq)
+![HashiCorp's Vault homepage](<https://imgur.com/P1qBLnq>)
 
 </p>
 
