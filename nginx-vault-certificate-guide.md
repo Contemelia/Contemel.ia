@@ -351,7 +351,7 @@ With this, you will have successfully initiated your Vault and logged in and the
 
 <br>
 
-![VAULT homepage](<VAULT homepage.png>)
+![HashiCorp's Vault homepage](https://imgur.com/P1qBLnq)
 
 </p>
 
@@ -387,7 +387,7 @@ Root CAs are typically operated by trusted organizations, such as commercial CAs
 1. Under the *Secrets* tab, start by navigating into the *Enable new engine* option. You will find yourself in this menu:
 <br>
 <br>
-    ![Enabling the engine for the root CA](<Enable new engine.png>)
+    ![Creating a new Secrets Engine](https://imgur.com/zd76jmj)
 
     In this menu, click on 'Next' after selecting `PKI Certificates` under the 'Generic' section.
 <br>
@@ -399,13 +399,13 @@ Root CAs are typically operated by trusted organizations, such as commercial CAs
 
 2. Now you'll have to select a path in which you'd like to access your root Certificate Authority from. By default it is set to 'pki'. However, we may change it according to our convenience. In our case, we'll be going with 'Root' as our path.
 
-    ![Creating a path for the root CA](<Enable Root path.png>)
+    ![Enabling the PKI Secrets Engine (Root)](https://imgur.com/4QjZ6WQ)
 <br>
 <br>
 Under *Method Options* enable `Max Lease TTL`. Now you may set the maximum duration your root may issue a certificate with. In our case, we'll go with `87600 hours` (10 years).
 <br>
 <br>
-![Setting up the Max Time To Lease for the root CA](<Root MTTL.png>)
+    ![Setting up the Maximum Time-To-Lease (Root)](https://imgur.com/2rMPdB8)
 <br>
 Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engine.
 
@@ -419,7 +419,7 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 1. Within this directory you just created, under the *Configuration* tab, click on `Configure`. Then, proceed by clicking on `Configure CA`. Here, make sure the 'CA Type' is set as *root*. Now, enter a common name. This will be your domain. For our purpose, we'll use `domain.com` as our domain. Upon deployment, it is extremely recommended to enter your address as well. Upon following all the instruction, your page should look somewhat like this.
 
-    ![Configuring the root CA](<Root configure CA.png>)
+    ![Configuring the Certificate Authority (Root)](https://imgur.com/KKFrizx)
 
     Exit by clicking on `Save`.
 <br>
@@ -474,7 +474,7 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 From the *Secrets* tab, go to the directory you have your root CA configured in.
 
-![Role options while creating the role n the 'Root' directory](<Root create role option.png>)
+!['Roles' tab to create a role (Root)](https://imgur.com/4AAsiCJ)
 
 Under the *Roles* tab, click on `Create role` to create a new role.
 
@@ -507,7 +507,7 @@ From the *Roles* tab, click on the role you just created. In this menu, you'll b
 
 Here's what your panel would look like.
 
-![Details of the root certificate](<Root certificate details.png>)
+![Issuing the certificate for the sub-domain 'root.domain.com' using the 'rootRole' role from the root Certificate Authority](https://imgur.com/RHVLTDu)
 
 Proceed by generating your certificate.
 
@@ -564,7 +564,7 @@ When validating a certificate, the trustworthiness of an intermediate CA is esta
 1. Under the *Secrets* tab, start by navigating into the *Enable new engine* option. You will find yourself in this menu:
 <br>
 <br>
-    ![Enabling the engine for the intermediate CA](<Enable new engine.png>)
+    ![Creating a new Secrets Engine](https://imgur.com/zd76jmj)
 
     In this menu, click on 'Next' after selecting `PKI Certificates` under the 'Generic' section.
 <br>
@@ -576,13 +576,13 @@ When validating a certificate, the trustworthiness of an intermediate CA is esta
 
 2. Now you'll have to select a path in which you'd like to access your intermediate Certificate Authority from. By default it is set to 'pki'. However, we may change it according to our convenience. In our case, we'll be going with 'Intermediate' as our path.
 
-    ![Path name while enablin the 'Intermediate' path](<Enable Intermediate path.png>)
+    ![Enabling the PKI Secrets Engine (Intermediate)](https://imgur.com/fKyO4zO)
 <br>
 <br>
 Under *Method Options* enable `Max Lease TTL`. Now you may set the maximum duration your root may issue a certificate with. In our case, we'll go with `48300 hours` (5 years).
 <br>
 <br>
-![Setiing up Max Time To Lease for 'Intermediate' path](<Intermediate MTTL.png>)
+![Setting up the Maximum Time-To-Lease (Intermediate)](https://imgur.com/uK1xc6V)
 <br>
 Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engine.
 
@@ -596,7 +596,7 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 1. Within this directory you just created, under the *Configuration* tab, click on `Configure`. Then, proceed by clicking on `Configure CA`. Here, make sure the 'CA Type' is set as *intermediate*. Now, enter a common name. This will be your domain. For our purpose, we'll use `domain.com Intermediate Certificate Authority` as our domain. Upon deployment, it is extremely recommended to enter your address as well. Upon following all the instruction, your page should look somewhat like this.
 
-    ![Configuring the intermediate CA](<Intermediate configure CA.png>)
+    ![Configuring the Certificate Authority (Intermediate)](https://imgur.com/LZPC64R)
 
     Exit by clicking on `Save`.
 <br>
@@ -608,7 +608,7 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 2. Copy what has been generated, and save it temporarily in a location of your choice in any readable format. This is the signing request that has been generated by your intermediate CA. You'll be getting this signed from the root CA you created earlier.
 
-    ![Issuing an intermediate CSR](<Intermediate CSR.png>)
+    ![Issuing a certificate as the intermediate CA (Intermediate) to request permission from the root CA (Root) to become an intermediate CA of the root(https://imgur.com/mglyBLF)
     <br>
     <br>
 
@@ -620,7 +620,7 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
     <br>
 
-    ![Issuing of the signature](<Intermediate sign.png>)
+    ![Signing the intermediate CA (Intermediate) as the root CA (Root)](https://imgur.com/Xuo69Nm)
     
     Proceed by saving it.
 
@@ -662,7 +662,7 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 From the *Secrets* tab, go to the directory you have your intermediate CA configured in.
 
-![Role options while creating the role in the 'Intermediate' directory](<Intermediate create role option.png>)
+!['Roles' tab to create a role (Intermediate)](https://imgur.com/adSs1wM)
 
 Under the *Roles* tab, click on `Create role` to create a new role.
 
@@ -695,7 +695,7 @@ From the *Roles* tab, click on the role you just created. In this menu, you'll b
 
 Here's what your panel would look like.
 
-![Details of the intermediate certificate](<Intermediate certificate details.png>)
+![Issuing the certificate for the sub-domain 'intermediate.domain.com' using the 'intermediateRole' role from the intermediate Certificate Authority](https://imgur.com/Bb55hx0)
 
 Proceed by generating your certificate.
 
@@ -908,7 +908,7 @@ When recalled, while creating the certificate, we saved a certificate with the n
 
 Restart your browser, and visit your sub-domain. You will notice that your browser now trusts your sub-domain. You can ensure this by viewing the `Secure` icon towards the left of your address bar. Here's what the address bar along with the *Secure* icon should look like.
 
-![Secured website with icon](<Secured website.png>)
+![The 'Secure' icon being displayed for the sub-domain 'root.domain.com'](https://imgur.com/ZbvqQCU)
 
 
 
