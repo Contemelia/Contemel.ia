@@ -351,7 +351,8 @@ With this, you will have successfully initiated your Vault and logged in and the
 
 <br>
 
-![HashiCorp's Vault homepage](https://imgur.com/P1qBLnq)
+![HashiCorp's Vault homepage](https://github.com/Contemelia/Contemel.ia/assets/101722929/9c2c37b9-cb54-45ad-976a-933969016539)
+
 
 </p>
 
@@ -387,7 +388,8 @@ Root CAs are typically operated by trusted organizations, such as commercial CAs
 1. Under the *Secrets* tab, start by navigating into the *Enable new engine* option. You will find yourself in this menu:
 <br>
 <br>
-    ![Creating a new Secrets Engine](https://imgur.com/zd76jmj)
+    ![Creating a new Secrets Engine](https://github.com/Contemelia/Contemel.ia/assets/101722929/b547c793-6003-456f-baaa-aecb4793e165)
+
 
     In this menu, click on 'Next' after selecting `PKI Certificates` under the 'Generic' section.
 <br>
@@ -399,13 +401,13 @@ Root CAs are typically operated by trusted organizations, such as commercial CAs
 
 2. Now you'll have to select a path in which you'd like to access your root Certificate Authority from. By default it is set to 'pki'. However, we may change it according to our convenience. In our case, we'll be going with 'Root' as our path.
 
-    ![Enabling the PKI Secrets Engine (Root)](https://imgur.com/4QjZ6WQ)
+    ![Enabling the PKI Secrets Engine (Root)](https://github.com/Contemelia/Contemel.ia/assets/101722929/7a02ae4f-ebc2-4966-b9fe-6f026d284023)
 <br>
 <br>
 Under *Method Options* enable `Max Lease TTL`. Now you may set the maximum duration your root may issue a certificate with. In our case, we'll go with `87600 hours` (10 years).
 <br>
 <br>
-    ![Setting up the Maximum Time-To-Lease (Root)](https://imgur.com/2rMPdB8)
+    ![Setting up the Maximum Time-To-Lease (Root)](https://github.com/Contemelia/Contemel.ia/assets/101722929/b5c83952-18b1-4780-8a61-23de76936d75)
 <br>
 Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engine.
 
@@ -419,7 +421,8 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 1. Within this directory you just created, under the *Configuration* tab, click on `Configure`. Then, proceed by clicking on `Configure CA`. Here, make sure the 'CA Type' is set as *root*. Now, enter a common name. This will be your domain. For our purpose, we'll use `domain.com` as our domain. Upon deployment, it is extremely recommended to enter your address as well. Upon following all the instruction, your page should look somewhat like this.
 
-    ![Configuring the Certificate Authority (Root)](https://imgur.com/KKFrizx)
+    ![Configuring the Certificate Authority (Root)](https://github.com/Contemelia/Contemel.ia/assets/101722929/71fbb498-bef0-4eca-b862-85dfb123c1a8)
+
 
     Exit by clicking on `Save`.
 <br>
@@ -474,7 +477,8 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 From the *Secrets* tab, go to the directory you have your root CA configured in.
 
-!['Roles' tab to create a role (Root)](https://imgur.com/4AAsiCJ)
+!['Roles' tab to create a role (Root)](https://github.com/Contemelia/Contemel.ia/assets/101722929/ff2125ab-42ee-4357-a630-a61c01848de2)
+
 
 Under the *Roles* tab, click on `Create role` to create a new role.
 
@@ -507,7 +511,7 @@ From the *Roles* tab, click on the role you just created. In this menu, you'll b
 
 Here's what your panel would look like.
 
-![Issuing the certificate for the sub-domain 'root.domain.com' using the 'rootRole' role from the root Certificate Authority](https://imgur.com/RHVLTDu)
+![Issuing the certificate for the sub-domain 'root.domain.com' using the 'rootRole' role from the root Certificate Authority](https://github.com/Contemelia/Contemel.ia/assets/101722929/f82971dd-d193-4ef9-94ea-ff2fa807a27e)
 
 Proceed by generating your certificate.
 
@@ -564,7 +568,8 @@ When validating a certificate, the trustworthiness of an intermediate CA is esta
 1. Under the *Secrets* tab, start by navigating into the *Enable new engine* option. You will find yourself in this menu:
 <br>
 <br>
-    ![Creating a new Secrets Engine](https://imgur.com/zd76jmj)
+    ![Creating a new Secrets Engine](https://github.com/Contemelia/Contemel.ia/assets/101722929/86f91d62-473c-478e-9a20-7912556c2219)
+
 
     In this menu, click on 'Next' after selecting `PKI Certificates` under the 'Generic' section.
 <br>
@@ -576,7 +581,8 @@ When validating a certificate, the trustworthiness of an intermediate CA is esta
 
 2. Now you'll have to select a path in which you'd like to access your intermediate Certificate Authority from. By default it is set to 'pki'. However, we may change it according to our convenience. In our case, we'll be going with 'Intermediate' as our path.
 
-    ![Enabling the PKI Secrets Engine (Intermediate)](https://imgur.com/fKyO4zO)
+    ![Enabling the PKI Secrets Engine (Intermediate)](https://github.com/Contemelia/Contemel.ia/assets/101722929/97282f5d-c9eb-428e-baca-a02c7393462a)
+
 <br>
 <br>
 Under *Method Options* enable `Max Lease TTL`. Now you may set the maximum duration your root may issue a certificate with. In our case, we'll go with `48300 hours` (5 years).
@@ -596,7 +602,7 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 1. Within this directory you just created, under the *Configuration* tab, click on `Configure`. Then, proceed by clicking on `Configure CA`. Here, make sure the 'CA Type' is set as *intermediate*. Now, enter a common name. This will be your domain. For our purpose, we'll use `domain.com Intermediate Certificate Authority` as our domain. Upon deployment, it is extremely recommended to enter your address as well. Upon following all the instruction, your page should look somewhat like this.
 
-    ![Configuring the Certificate Authority (Intermediate)](https://imgur.com/LZPC64R)
+    ![Configuring the Certificate Authority (Intermediate)](https://github.com/Contemelia/Contemel.ia/assets/101722929/2a4e860e-4477-4642-aa2c-f7bc0ddeef4c)
 
     Exit by clicking on `Save`.
 <br>
@@ -608,7 +614,7 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 2. Copy what has been generated, and save it temporarily in a location of your choice in any readable format. This is the signing request that has been generated by your intermediate CA. You'll be getting this signed from the root CA you created earlier.
 
-    ![Issuing a certificate as the intermediate CA \(Intermediate\) to request permission from the root CA \(Root\) to become an intermediate CA of the root](https://imgur.com/mglyBLF)
+    ![Issuing a certificate as the intermediate CA \(Intermediate\) to request permission from the root CA \(Root\) to become an intermediate CA of the root](https://github.com/Contemelia/Contemel.ia/assets/101722929/7caca22b-1c2c-4592-96b5-2a7713e316b4)
     <br>
     <br>
 
@@ -619,8 +625,9 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
     - Under `Common name` type your domain name (`domain.com` in our case).
 
     <br>
+    
+    ![Signing the intermediate CA (Intermediate) as the root CA (Root)](https://github.com/Contemelia/Contemel.ia/assets/101722929/7c4dec5c-83b3-4e4d-acec-8ba55bb0c9b8)
 
-    ![Signing the intermediate CA (Intermediate) as the root CA (Root)](https://imgur.com/Xuo69Nm)
     
     Proceed by saving it.
 
@@ -662,7 +669,8 @@ Ater choosing your maximum TTL, click on `Enable Engine` to enable your PKI engi
 
 From the *Secrets* tab, go to the directory you have your intermediate CA configured in.
 
-!['Roles' tab to create a role (Intermediate)](https://imgur.com/adSs1wM)
+!['Roles' tab to create a role (Intermediate)](https://github.com/Contemelia/Contemel.ia/assets/101722929/c55dff83-795a-4f38-82c0-028e761fcd77)
+
 
 Under the *Roles* tab, click on `Create role` to create a new role.
 
@@ -695,7 +703,8 @@ From the *Roles* tab, click on the role you just created. In this menu, you'll b
 
 Here's what your panel would look like.
 
-![Issuing the certificate for the sub-domain 'intermediate.domain.com' using the 'intermediateRole' role from the intermediate Certificate Authority](https://imgur.com/Bb55hx0)
+![Issuing the certificate for the sub-domain 'intermediate.domain.com' using the 'intermediateRole' role from the intermediate Certificate Authority](https://github.com/Contemelia/Contemel.ia/assets/101722929/8963b3b1-b130-4c10-944e-3f249342185a)
+
 
 Proceed by generating your certificate.
 
@@ -908,7 +917,7 @@ When recalled, while creating the certificate, we saved a certificate with the n
 
 Restart your browser, and visit your sub-domain. You will notice that your browser now trusts your sub-domain. You can ensure this by viewing the `Secure` icon towards the left of your address bar. Here's what the address bar along with the *Secure* icon should look like.
 
-![The 'Secure' icon being displayed for the sub-domain 'root.domain.com'](https://imgur.com/ZbvqQCU)
+![The 'Secure' icon being displayed for the sub-domain 'root.domain.com'](https://github.com/Contemelia/Contemel.ia/assets/101722929/daf42cf1-77c5-488c-8711-8f2c87588ef1)
 
 
 
