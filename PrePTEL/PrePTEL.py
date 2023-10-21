@@ -16,6 +16,7 @@ import os
 
 from random import sample
 from subprocess import check_call, CalledProcessError
+from sys import exit
 from time import sleep
 
 
@@ -27,7 +28,7 @@ class PrePTEL:
         
         self.author = "Contemelia"
         self.appName = "PrePTEL"
-        self.appVersion = "1.0a"
+        self.appVersion = "1.1a"
         
         if __name__ == '__main__':
             
@@ -35,7 +36,9 @@ class PrePTEL:
             self.loadQuestions()
             self.selectPreference()
             self.askQuestions()
-            self.showResults()            
+            self.showResults()
+            
+            input("\n\n\n\nPress enter to exit.")     
     
     
     
@@ -54,11 +57,21 @@ class PrePTEL:
         
         self.waterMark()
         self.directory = r'./Materials'
-        self.courseList = [course for course in os.listdir(self.directory) if course.endswith('.xlsx')]
+        try:
+            self.courseList = [course for course in os.listdir(self.directory) if course.endswith('.xlsx')]
+        except Exception as error:
+            print(f"Error: {error}\nMake sure to include the folder titled 'Materials' within the same directory as the script.")
+            sleep(3)
+            exit()
         
-        print("Please select a course...")
-        for index in range(len(self.courseList)):
-            print(f"({index + 1}) {os.path.splitext(self.courseList[index])[0]}")
+        if self.courseList:    
+            print("Please select a course...")
+            for index in range(len(self.courseList)):
+                print(f"({index + 1}) {os.path.splitext(self.courseList[index])[0]}")
+        else:
+            print("You do not have any material for use in a supported format.")
+            sleep(3)
+            exit()
         
         try:
             preferedCourse = int(input("\nYour choice: "))
@@ -80,6 +93,13 @@ class PrePTEL:
         self.questionBank = []
         for row in self.sheet.iter_rows(values_only = True):
             self.questionBank.append(list(row))
+        
+        if len(self.questionBank) != 6:
+            print(f"\nThe structure of this material is not supported.")
+            sleep(3)
+            self.selectCourse()
+            self.loadQuestions()
+            return
         
         self.workbook.close()
     
