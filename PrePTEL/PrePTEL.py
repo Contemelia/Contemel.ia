@@ -4,8 +4,6 @@
 # have downloaded the appropriate question material alongside this script. The material is 
 # provided in the form of an Excel file, named after the corresponding course. This script is 
 # intended to be compatible with similarly structured question materials.
-# 
-# Alternatively, you may download the executable (.exe) version from the repository.
 
 
 
@@ -28,7 +26,7 @@ class PrePTEL:
         
         self.author = "Contemelia"
         self.appName = "PrePTEL"
-        self.appVersion = "1.1a"
+        self.appVersion = "1.1b"
         
         if __name__ == '__main__':
             
