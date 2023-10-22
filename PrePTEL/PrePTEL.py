@@ -8,7 +8,6 @@
 
 
 
-
 import openpyxl
 import os
 
@@ -26,7 +25,7 @@ class PrePTEL:
         
         self.author = "Contemelia"
         self.appName = "PrePTEL"
-        self.appVersion = "1.1b"
+        self.appVersion = "1.1c"
         
         if __name__ == '__main__':
             
@@ -92,12 +91,12 @@ class PrePTEL:
         for row in self.sheet.iter_rows(values_only = True):
             self.questionBank.append(list(row))
         
-        if len(self.questionBank) != 6:
-            print(f"\nThe structure of this material is not supported.")
-            sleep(3)
-            self.selectCourse()
-            self.loadQuestions()
-            return
+        # if len(self.questionBank) != 6:
+        #     print(f"\nThe structure of this material is not supported.")
+        #     sleep(3)
+        #     self.selectCourse()
+        #     self.loadQuestions()
+        #     return
         
         self.workbook.close()
     
